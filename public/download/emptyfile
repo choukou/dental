@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<title>メディケアー</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="/templates/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="/templates/css/common.css" rel="stylesheet">
+	<link href="/templates/css/jquery-ui.css" rel="stylesheet">
+	<link href="/templates/css/media.css" rel="stylesheet">
+	<!-- font  -->
+<!--      <link href="/templates/css/font-awesome.css" rel="stylesheet"> -->
+	 <link rel="stylesheet" href="/templates/css/font-awesome.min.css">
+	<!-- <link href="public/css/flat-ui.css" rel="stylesheet"> -->
+	<!-- form -->
+	<link href="/templates/css/form/list-customer.css" rel="stylesheet">
+	<!-- Just for debugging purposes. Don't actually copy this line! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+	
+	<!-- theme process for iframe - Duy: 2015/15/05-->
+		<link id="" href="/templates/css/theme/theme-1.css" rel="stylesheet">
+	<!-- end: theme process for iframe - Duy: 2015/15/05-->
+	
+	<link href="/templates/css/notification.css" rel="stylesheet">
+	<link href="/templates/css/colorbox.css" rel="stylesheet">
+
+	<script src="/templates/js/jquery-1.11.0.min.js"></script>
+	<script src="/templates/js/jquery-migrate-1.2.1.js"></script>
+	<script type="text/javascript" src="/templates/js/msg.js"></script>
+	<script src="/templates/js/medicareplugin.js?1432090597"></script>
+	<script src="/templates/js/jquery-ui.js"></script>
+	<script src="/templates/js/jquery.utility.js"></script>
+	<script src="/templates/js/jquery.alerts.js"></script>
+	<script src="/templates/js/jquery.number.js"></script>
+	<script src="/templates/js/common.js?1432090597"></script>
+	<script src="/templates/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/templates/js/jquery.fixedtable.js"></script>
+	<script src="/templates/js/jquery.colorbox-min.js"></script>
+</head>
+
+	<body>
+		<div class="div_loading">
+			<div class="image_loading_popup">
+				<img src='/templates/images/loading2.gif'/>
+				<br>
+				<label class="text-center"></label>
+			</div>
+		</div>
+		<body>
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		</div>
+		<div class="box col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 150px; background: rgba(51, 203, 152, 1); border-radius: 6px; min-width: 280px;">
+			<div id="login-form" class="box-content parent-nopadding text-center">
+				<span class="" style="font-weight: bold; font-size: 18px!important; color: white;">ログイン</span>
+				<div style="margin-top: 30px;">
+					<span class="glyphicon glyphicon-user icon-item" style="top: 7px; margin-right: 10px;"></span>
+					<input id='username' type="text" class="form-control required" placeholder="ログインＩＤ">
+				</div>
+				<div>
+					<span class="glyphicon glyphicon-lock icon-item" style="top: 7px; margin-right: 10px;"></span>
+					<input id='password' type="password" class="form-control required" placeholder="パスワード">
+				</div>
+				<div>
+					<button class="btn btn-primary" id = 'login'><span style="font-weight: bold; color: white;">ログイン</span></button>
+				</div>
+				<div class="text-right" style="margin-top: 30px;">
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<link href="/templates/css/form/sy030.css" rel="stylesheet">
+<script src="/templates/js/form/sy030.js"></script>	</body>
+</html>

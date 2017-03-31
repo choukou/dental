@@ -1,0 +1,10 @@
+<?php
+
+$rsp = new Respon();
+$rsp->Status = EXCPT;
+$rsp->Message = $this->message;
+if(isset($this->exception) && DEBUG) {
+	$rsp->Exception = $this->exception;
+}
+echo json_encode($rsp);
+?>

@@ -1,0 +1,122 @@
+<?php $picture = $this->getHelper('ShowProfile');?>
+<div class="sidebar-menu toggle-others">
+	<div class="sidebar-menu-inner ps-container ps-active-y">
+		<header class="logo-env">
+			<!-- logo -->
+			<div class="logo" style="text-align: center;">
+				<a href="/profile" class="logo-expanded">
+					<img class="img-circle img-inline userpic-32" src="<?php echo $picture->showProfile($this->user['rank'], $this->user['sex']); ?>" width="80" alt="">
+				</a>
+				<a href="/profile" class="logo-collapsed">
+					<img class="img-circle img-inline userpic-32" src="<?php echo $picture->showProfile($this->user['rank'], $this->user['sex']); ?>" width="40" alt="">
+				</a>
+				<a style="color: #fff;position:relative;display: block;" href="/profile" ><?php echo $this->user['user_name'];?></a>
+			</div>
+			<!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+			<div class="mobile-menu-toggle visible-xs">
+				<a href="#" data-toggle="mobile-menu"> <i class="fa-bars"></i></a>
+			</div>
+			<!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+		</header>
+		<ul id="main-menu" class="main-menu">
+			<li class="active">
+				<a href="/dashboard">
+					<i class="fa fa-dashboard"></i> <span class="title">Dashboard</span>
+				</a>
+			</li>
+			<?php if($this->user['role_id'] == 3){?>
+			<li class="opened has-sub">
+				<a href="/admin">
+					<i class="linecons-cog"></i>
+					<span class="title">Admin</span>
+				</a>
+				<ul>
+					<li class="">
+						<a href="/admin">
+							<span class="title">Setting Package</span>
+						</a>
+					</li>
+					<li class="">
+						<a href="/rate">
+							<span class="title">Setting Rate</span>
+						</a>
+					</li>
+					<li class="">
+						<a href="/walletadmin">
+							<span class="title">Wallet Admin</span>
+						</a>
+					</li>
+					<li class="">
+						<a href="/listuser">
+							<span class="title">List User</span>
+						</a>
+					</li>
+					<li class="">
+						<a href="/listgh">
+							<span class="title">List withdraw</span>
+						</a>
+					</li>
+					<li class="">
+						<a href="/settingshomepage">
+							<span class="title">Settings home page</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<?php }?>
+			<li class="">
+				<a href="/token">
+					<i class="linecons-heart"></i> <span class="title">Tokens</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="/providehelp">
+					<i class="fa fa-cloud-upload"></i> <span class="title">Deposit</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="/gethelp">
+					<i class="fa fa-cloud-download"></i> <span class="title">Withdraw</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="/mywallet">
+					<i class="fa fa-bitcoin"></i> <span class="title">My Wallet</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="/referral">
+					<i class="fa fa-child"></i> <span class="title">Referral(s)</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="/downlinetree">
+					<i class="fa fa-sitemap"></i> <span class="title">Downline tree</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="/invite">
+					<i class="linecons-tag"></i> <span class="title">Referral Link</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="/master/message/index">
+					<i class="linecons-mail"></i> <span class="title">Message</span>
+					<?php if($this->count_msg > 0) {?>
+					<span class="label label-success pull-right"><?php echo $this->count_msg;?></span>
+					<?php }?>
+				</a>
+			</li>
+			<li class="">
+				<a href="/profile">
+					<i class="fa fa-user" style="padding-left: 5px;"	></i> <span class="title">Profile</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="/logout">
+					<i class="fa fa-sign-out" style="padding-left: 5px;"></i> <span class="title">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

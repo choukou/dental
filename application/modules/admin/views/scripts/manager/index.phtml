@@ -1,0 +1,56 @@
+<style>
+.name-error {
+	display: block;
+}
+</style>
+<script src="assets/js/form/admin.js?<?php echo time();?>"></script>
+<div id="admin-content">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">List Package</h3>
+		</div>
+		<div class="panel-body">
+			<div id="example-2_wrapper"
+				class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+				<table class="table table-bordered table-striped dataTable no-footer"
+					role="grid" aria-describedby="example-2_info">
+					<thead>
+						<tr role="row">
+							<th>No</th>
+							<th>Package Name</th>
+							<th>Rate(% / day)</th>
+							<th style="min-width: 100px;">Pin cost(Deposit)</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody class="middle-align">
+						<?php foreach ($this->data as $index => $row) {?>
+						<tr role="row">
+							<td>
+								<?php echo $row['id'];?>
+								<input name="id" type="hidden" value="<?php echo $row['id'];?>"/>
+							</td>
+							<td><?php echo $row['package_name'];?></td>
+							<td>
+								<div class="form-group">
+									<input name="rate" type="text" value="<?php echo $row['rate'];?>" ></input>
+								</div>
+							</td>
+							<td>
+								<div class="form-group">
+									<input name="pin_cost" type="text" value="<?php echo $row['pin_cost'];?>" ></input>
+								</div>
+							</td>
+
+							<td><button type="button"  class="btn btn-turquoise btn-save">Save</button></td>
+						</tr>
+						<?php }?>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+</div>

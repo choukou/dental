@@ -1,0 +1,103 @@
+<?php echo $this->doctype(); ?>
+<html lang="ja">
+	<head>
+		<title><?php echo  $this->title;?></title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="btcclub" />
+		<meta name="author" content="" />
+
+		<link rel="stylesheet" href="/assets/css/fonts/linecons/css/linecons.css">
+		<link rel="stylesheet" href="/assets/css/fonts/fontawesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/assets/css/bootstrap.css">
+		<link rel="stylesheet" href="/assets/css/core.css?<?php echo time();?>">
+		<link rel="stylesheet" href="/assets/css/forms.css">
+		<link rel="stylesheet" href="/assets/css/components.css">
+		<link rel="stylesheet" href="/assets/css/skins.css">
+		<link rel="stylesheet" href="/assets/css/custom.css?<?php echo time();?>">
+		<link rel="stylesheet" href="/assets/js/select2/select2.css">
+		<link rel="stylesheet" href="/assets/js/select2/select2-bootstrap.css">
+
+		<script src="/assets/js/jquery-1.11.1.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="/assets/js/html5shiv.min.js"></script>
+			<script src="/assets/js/respond.min.js"></script>
+		<![endif]-->
+
+			<!-- Imported styles on this page -->
+		<link rel="stylesheet" href="/assets/css/fonts/meteocons/css/meteocons.css">
+		<!-- Bottom Scripts -->
+		<script src="/assets/js/bootstrap.min.js"></script>
+		<script src="/assets/js/TweenMax.min.js"></script>
+		<script src="/assets/js/resizeable.js"></script>
+		<script src="/assets/js/joinable.js"></script>
+		<script src="/assets/js/api.js"></script>
+		<script src="/assets/js/toggles.js"></script>
+
+		<!-- Imported scripts on this page -->
+		<script src="/assets/js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="/assets/js/jvectormap/regions/jquery-jvectormap-world-mill-en.js"></script>
+		<script src="/assets/js/widgets.js"></script>
+
+		<!-- JavaScripts initializations and stuff -->
+		<script src="/assets/js/custom.js"></script>
+<!-- 		<script src="/assets/js/googleAnalytics.js"></script> -->
+	</head>
+	<body class="page-body">
+		<?php echo $this->render('menu.phtml')?>
+		<div class="page-container">
+			<div class="main-content">
+				<section class="mailbox-env">
+					<div class="row">
+						<!-- Email Single -->
+						<div class="col-sm-1"></div>
+						<div class="col-sm-10">
+							<?php echo $this->layout()->content;?>
+						</div>
+						<div class="col-sm-1"></div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<!-- Modal 4 (Confirm)-->
+		<div class="modal fade" id="modal-4" data-backdrop="static">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Confirm!</h4>
+					</div>
+					<div class="modal-body">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-dismiss="modal">Continue</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+ <script src="/assets/js/select2/select2.min.js"></script>
+ <script src="/assets/js/form/m5common.js?<?php echo time();?>"></script>
+
+  <script type="text/javascript">
+	var iPad = /iPad/.test(navigator.userAgent) && !window.MSStream;
+	var iPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
+	viewport = document.querySelector("meta[name=viewport]");
+	if(iPad) {
+		viewport.setAttribute('content', 'width=device-width, initial-scale=0.7, maximum-scale=1.0, user-scalable=1');
+		$('img.laixuat').css('height','220px');
+		$('ul.list-video ').find('img').css({'height':'175px', 'vertical-align': 'bottom'});
+		$('ul.list-video ').find('iframe').css({'height':'175px'});
+	}
+
+	if(iPhone){
+		viewport.setAttribute('content', 'width=device-width, initial-scale=0.3, maximum-scale=1.0, user-scalable=1');
+		$('img.laixuat').css('height','220px');
+		$('ul.list-video ').find('img').css({'height':'175px', 'vertical-align': 'bottom'});
+		$('ul.list-video ').find('iframe').css({'height':'175px'});
+	}
+ </script>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="btcclub" />
+<meta name="author" content="" />
+<title>BTCCLUB - Login</title>
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
+<link rel="stylesheet" href="/assets/css/fonts/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/bootstrap.css">
+<link rel="stylesheet" href="/assets/css/core.css">
+<link rel="stylesheet" href="/assets/css/forms.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<link rel="stylesheet" href="/assets/css/skins.css">
+<script src="/assets/js/jquery-1.11.1.min.js"></script>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+		<script src="/assets/js/html5shiv.min.js"></script>
+		<script src="/assets/js/respond.min.js"></script>
+	<![endif]-->
+<style type="text/css">
+.login-page.login-light {
+	background: url("/assets/images/web_btcclub_login.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.login-page.login-light .login-form {
+/* 	background-color: #bf8f4c; */
+	background-color: rgba(228, 194, 76, 0.4);
+	border-radius: 6px;
+	border: 1px solid black;
+}
+.login-page .login-form .login-header {
+	margin-bottom: 10px;
+}
+.login-page .login-form .login-header p{
+	color: white;
+	font-size: 20px;
+}
+.btn.text-left, .login-header {
+	text-align: center;
+}
+
+.login-page.login-light .login-form .login-footer a {
+	color: white;
+}
+.captcha {
+	color: black;
+	font-weight: bolder;
+}
+.login-page .login-form .login-footer {
+    margin-top: 15px;
+}
+</style>
+</head>
+<body class="page-body login-page login-light">
+	<div class="login-container">
+		<div class="col-xs-6 login-content" >
+			<!-- Errors container -->
+			<div class="errors-container"></div>
+			<!-- Add class "fade-in-effect" for login form effect -->
+			<form method="post" role="form" id="login"
+				class="login-form fade-in-effect">
+				<div class="login-logo text-center">
+					<img style="width: auto;max-height: 150px;max-width: 100%;" alt="logio" src="/assets/images/logo.png">
+				</div>
+				<div class="login-header">
+					<p>Login</p>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control required" data-validate="required" data-message-required="This is required field." name="Username" placeholder="Username or email" id="username" />
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control required" data-validate="required" data-message-required="This is required field." name="passwd" id="passwd"
+						placeholder="Password" />
+				</div>
+				<div class="form-group">
+					<label class="captcha">Please type word: <?php echo $this->captcha;?>  </label>
+					<input autocomplete="off" autofocus="autofocus" autocorrect="off" autocapitalize="none" type="text" class="form-control required" data-validate="required" data-message-required="This is required field." name="passwd" id="captcha"
+						placeholder="captcha" />
+				</div>
+				<div class="form-group">
+					<button id="btn-login" type="button" class="btn btn-primary  btn-block text-left" captcha="<?php echo $this->captcha;?>">
+						<i class="fa-lock"></i> SIGN IN
+					</button>
+				</div>
+				<div class="login-footer">
+					<a href="/resetpassword">Forgot your password?</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+<!-- 	<script src="/assets/js/jquery-validate/jquery.validate.min.js"></script> -->
+	<script src="/assets/js/form/m5common.js?<?php echo time();?>"></script>
+	<script src="/assets/js/form/login.js?<?php echo time();?>"></script>
+	<script type="text/javascript">
+	var iPad = /iPad/.test(navigator.userAgent) && !window.MSStream;
+	var iPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
+	viewport = document.querySelector("meta[name=viewport]");
+	if(iPad) {
+		viewport.setAttribute('content', 'width=device-width, initial-scale=0.7, maximum-scale=1.0, user-scalable=1');
+		$('img.laixuat').css('height','220px');
+		$('ul.list-video ').find('img').css({'height':'175px', 'vertical-align': 'bottom'});
+		$('ul.list-video ').find('iframe').css({'height':'175px'});
+	}
+
+	if(iPhone){
+		viewport.setAttribute('content', 'width=device-width, initial-scale=0.3, maximum-scale=1.0, user-scalable=1');
+		$('img.laixuat').css('height','220px');
+		$('ul.list-video ').find('img').css({'height':'175px', 'vertical-align': 'bottom'});
+		$('ul.list-video ').find('iframe').css({'height':'175px'});
+	}
+	</script>
+</html>
